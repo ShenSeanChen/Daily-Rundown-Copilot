@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LangChain Flask App</title>
+    </head>
+    <body>
+        <form method="POST">
+            <textarea name="user_input" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        {% for question, answer in history %}
+            <p>Question: {{ question }}</p>
+            <p>Answer: {{ answer }}</p>
+            <hr>
+        {% endfor %}
+        <!-- {% if answer %}
+            <p>Question: {{user_input}}</p>
+            <p>Answer: {{ answer }}</p>
+        {% endif %} -->
+    </body>
+</html>
